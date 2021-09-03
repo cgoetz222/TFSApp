@@ -1,0 +1,50 @@
+.root {
+
+}
+
+.app-bar {
+    -fx-background-color: #fe6c61;
+}
+
+.app-bar > .nav-area > .button:hover {
+    -fx-background-color: #50575e;
+}
+
+.navigation-drawer {
+	-fx-background-color: #50575e;
+}
+
+.navigation-drawer > *  > .scroll-pane {
+	-fx-background-color: #50575e;
+}
+
+.navigation-drawer > *  > .scroll-pane > .viewport > * {
+	-fx-background-color: #fe6c61;
+}
+
+.navigation-drawer > * > .scroll-pane > .viewport > * > .container > .item:hover:active {
+	-fx-background-color: #2c3338;
+}
+
+.navigation-drawer > * > .scroll-pane > .viewport > * > .container > .item:hover {
+	-fx-background-color: #2c3338;
+}
+
+.navigation-drawer > * > .scroll-pane > .viewport > * > .container > .item:hover > .item-content > .text-box > .label {
+	-fx-text-fill: #ffffff; 
+}
+.navigation-drawer > * > .scroll-pane > .viewport > * > .container > .item:selected {
+	-fx-background-color: #50575e;
+}
+
+.navigation-drawer > * > .scroll-pane > .viewport > * > .container > .item:selected > .item-content > .text-box > .label {
+	-fx-text-fill: #ffffff; 
+}
+
+.navigation-drawer > * > .scroll-pane > .viewport > * > .container > .item:selected > .item-content > .image-box > .label {
+	-fx-text-fill: #ffffff; 
+}
+
+.navigation-drawer > * > .scroll-pane > .viewport > * > .container > .item:hover > .item-content > .image-box > .label {
+	-fx-text-fill: #ffffff; 
+}

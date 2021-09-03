@@ -1,0 +1,32 @@
+.view {
+	-fx-background-color: #2c3338;
+}
+
+.card-pane > .charm-list-view > .list-view {
+    -fx-background-color: transparent;
+}
+
+.card {
+	-fx-background-color: #50575e;
+}
+
+.headerText {
+	-fx-font-weight: bold;	
+	-fx-text-fill: #fe6c61;
+	-fx-padding: 10;
+}
+
+.normalText {
+	-fx-text-fill: #ffffff;
+	-fx-padding: 5;
+}
+
+.normalInputText {
+	-fx-background-color: #2c3338;
+	-fx-text-fill: #ffffff;
+	-fx-padding: 5;
+}
+
+.button {
+	-fx-background-color: #fe6c61;
+}

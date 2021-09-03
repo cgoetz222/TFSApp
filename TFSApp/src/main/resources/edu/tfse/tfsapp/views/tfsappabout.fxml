@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.gluonhq.charm.glisten.control.CardPane?>
+<?import com.gluonhq.charm.glisten.mvc.View?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+
+<View fx:id="tfsappabout" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="350.0" stylesheets="@tfsappabout.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.tfse.tfsapp.views.TFSAppAboutPresenter">
+   <center>
+      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="350.0" BorderPane.alignment="CENTER">
+         <children>
+            <CardPane prefWidth="350.0" VBox.vgrow="ALWAYS">
+               <VBox prefWidth="350.0" stylesheets="@tfsappabout.css">
+                  <children>
+                     <Label styleClass="headerText" text="Autor" />
+                     <Label styleClass="normalText" text="Carlo Götz" />
+                  </children>
+               </VBox>
+               <VBox prefWidth="350.0">
+                  <children>
+                     <Label styleClass="headerText" text="Zweck" />
+                     <Label prefWidth="350.0" styleClass="normalText" text="Die App dient dazu, Deinen Fitness-Stand zu ermitteln und zu verbessern." wrapText="true" />
+                  </children>
+               </VBox>
+               <VBox prefWidth="350.0">
+                  <children>
+                     <Label styleClass="headerText" text="Lizenzen und Copyright" />
+                     <Label styleClass="normalText" text="© by TFSE" />
+                     <Label prefWidth="350.0" styleClass="normalText" text="Diese App konnte nur erstellt werden, indem der Autor auf bereits vorhandene Bibliotheken zurückgreifen und diese in der App nutzen konnte. Ein Dank geht an folgende Personen/Institutionen:" wrapText="true" />
+                     <Label styleClass="normalText" text="google/gson Apache Lizenz 2.0" wrapText="true" />
+                     <Label prefWidth="350.0" styleClass="normalText" text="Gluon für die Gewährung einer kostenlosen Lizenz ihrer Gluon Mobile Umgebung" wrapText="true" />
+                  </children>
+               </VBox>
+               <VBox prefWidth="350.0">
+                  <children>
+                     <Label styleClass="headerText" text="Datenschutz" />
+                     <Label prefWidth="350.0" styleClass="normalText" text="Die App achtet auf Deinen Datenschutz. Deine Daten werden nur lokal auf Deinem Endgerät abgespeichert - sie werden dadurch vor dem Zugriff durch Dritte geschützt, wenn Du sie nicht weitergibst." wrapText="true" />
+                  </children>
+               </VBox>
+               <VBox prefWidth="350.0">
+                  <children>
+                     <Label styleClass="headerText" text="App-Version" />
+                     <Label fx:id="labelAppVersion" styleClass="normalText" text="Label" />
+                  </children>
+               </VBox>
+            </CardPane>
+         </children>
+      </VBox>
+   </center>
+   <top>
+      <CardPane prefHeight="69.0" prefWidth="350.0" style="-fx-allign: center;" BorderPane.alignment="CENTER">
+          <Label style="-fx-font-size: 15;" styleClass="headerText" text="Über die TFS-App" />
+      </CardPane>
+   </top>
+</View>
