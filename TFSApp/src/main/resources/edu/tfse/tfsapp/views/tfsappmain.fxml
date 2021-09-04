@@ -21,7 +21,7 @@
             <CardPane VBox.vgrow="ALWAYS">
                <VBox prefHeight="200.0" prefWidth="100.0">
                   <children>
-                      <Label styleClass="headerText" text="Person" />
+                      <Label styleClass="headerText" text="%main.person" />
                      <GridPane>
                        <columnConstraints>
                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="120.0" minWidth="10.0" prefWidth="95.0" />
@@ -35,10 +35,10 @@
                            <RowConstraints />
                        </rowConstraints>
                         <children>
-                           <Label styleClass="normalText" text="Name" />
-                           <Label styleClass="normalText" text="Alter" GridPane.rowIndex="1" />
-                           <Label styleClass="normalText" text="Größe in cm" GridPane.rowIndex="2" />
-                           <Label styleClass="normalText" text="Gewicht in kg" GridPane.rowIndex="3" />
+                           <Label styleClass="normalText" text="%main.name" />
+                           <Label styleClass="normalText" text="%main.age" GridPane.rowIndex="1" />
+                           <Label styleClass="normalText" text="%main.height" GridPane.rowIndex="2" />
+                           <Label styleClass="normalText" text="%main.weight" GridPane.rowIndex="3" />
                            <TextField fx:id="textFieldName" styleClass="normalInputText" GridPane.columnIndex="1">
                               <opaqueInsets>
                                  <Insets />
@@ -64,7 +64,7 @@
                </VBox>
                <VBox prefHeight="200.0" prefWidth="100.0">
                   <children>
-                     <Label styleClass="headerText" text="Trainingsplan" />
+                     <Label styleClass="headerText" text="%main.plan" />
                   </children>
                </VBox>
             </CardPane>
@@ -73,7 +73,7 @@
    </center>
    <top>
       <CardPane prefHeight="69.0" prefWidth="350.0" style="-fx-allign: center;" BorderPane.alignment="CENTER">
-          <Label style="-fx-font-size: 15;" styleClass="headerText" text="Screening App" />
+          <Label style="-fx-font-size: 15;" styleClass="headerText" text="%main.header" />
       </CardPane>
    </top>
    <bottom>
@@ -82,7 +82,7 @@
             <Insets bottom="5.0" left="20.0" right="20.0" />
          </padding>
          <children>
-            <Button fx:id="buttonSave" mnemonicParsing="false" onAction="#buttonClick" text="Save" />
+            <Button fx:id="buttonSave" mnemonicParsing="false" onAction="#buttonClick" text="%main.button.save" />
          </children>
       </HBox>
    </bottom>

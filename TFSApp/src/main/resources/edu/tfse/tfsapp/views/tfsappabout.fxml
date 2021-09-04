@@ -13,34 +13,34 @@
             <CardPane prefWidth="350.0" VBox.vgrow="ALWAYS">
                <VBox prefWidth="350.0" stylesheets="@tfsappabout.css">
                   <children>
-                     <Label styleClass="headerText" text="Autor" />
+                     <Label styleClass="headerText" text="%about.author" />
                      <Label styleClass="normalText" text="Carlo Götz" />
                   </children>
                </VBox>
                <VBox prefWidth="350.0">
                   <children>
-                     <Label styleClass="headerText" text="Zweck" />
-                     <Label prefWidth="350.0" styleClass="normalText" text="Die App dient dazu, Deinen Fitness-Stand zu ermitteln und zu verbessern." wrapText="true" />
+                     <Label styleClass="headerText" text="%about.purpose_head" />
+                     <Label prefWidth="350.0" styleClass="normalText" text="%about.purpose" wrapText="true" />
                   </children>
                </VBox>
                <VBox prefWidth="350.0">
                   <children>
-                     <Label styleClass="headerText" text="Lizenzen und Copyright" />
+                     <Label styleClass="headerText" text="%about.lic_cop" />
                      <Label styleClass="normalText" text="© by TFSE" />
-                     <Label prefWidth="350.0" styleClass="normalText" text="Diese App konnte nur erstellt werden, indem der Autor auf bereits vorhandene Bibliotheken zurückgreifen und diese in der App nutzen konnte. Ein Dank geht an folgende Personen/Institutionen:" wrapText="true" />
-                     <Label styleClass="normalText" text="google/gson Apache Lizenz 2.0" wrapText="true" />
-                     <Label prefWidth="350.0" styleClass="normalText" text="Gluon für die Gewährung einer kostenlosen Lizenz ihrer Gluon Mobile Umgebung" wrapText="true" />
+                     <Label prefWidth="350.0" styleClass="normalText" text="%about.thanks" wrapText="true" />
+                     <Label styleClass="normalText" text="%about.google_gson" wrapText="true" />
+                     <Label prefWidth="350.0" styleClass="normalText" text="%about.gluon" wrapText="true" />
                   </children>
                </VBox>
                <VBox prefWidth="350.0">
                   <children>
-                     <Label styleClass="headerText" text="Datenschutz" />
-                     <Label prefWidth="350.0" styleClass="normalText" text="Die App achtet auf Deinen Datenschutz. Deine Daten werden nur lokal auf Deinem Endgerät abgespeichert - sie werden dadurch vor dem Zugriff durch Dritte geschützt, wenn Du sie nicht weitergibst." wrapText="true" />
+                     <Label styleClass="headerText" text="%about.privacy" />
+                     <Label prefWidth="350.0" styleClass="normalText" text="%about.respect" wrapText="true" />
                   </children>
                </VBox>
                <VBox prefWidth="350.0">
                   <children>
-                     <Label styleClass="headerText" text="App-Version" />
+                     <Label styleClass="headerText" text="%about.version" />
                      <Label fx:id="labelAppVersion" styleClass="normalText" text="Label" />
                   </children>
                </VBox>
@@ -50,7 +50,7 @@
    </center>
    <top>
       <CardPane prefHeight="69.0" prefWidth="350.0" style="-fx-allign: center;" BorderPane.alignment="CENTER">
-          <Label style="-fx-font-size: 15;" styleClass="headerText" text="Über die TFS-App" />
+          <Label style="-fx-font-size: 15;" styleClass="headerText" text="%about.header" />
       </CardPane>
    </top>
 </View>

@@ -2,6 +2,7 @@ package edu.tfse.tfsapp;
 
 import edu.tfse.tfsapp.views.TFSAppMainView;
 import edu.tfse.tfsapp.data.DataHandler;
+import edu.tfse.tfsapp.helper.Messages;
 import edu.tfse.tfsapp.views.TFSAppAboutView;
 import com.gluonhq.charm.glisten.application.MobileApplication;
 import com.gluonhq.charm.glisten.visual.Swatch;
@@ -14,7 +15,7 @@ public class TFSApplication extends MobileApplication {
 	private static DataHandler _dataHandler;
 
     public static final String TFSAPPMAIN_VIEW = HOME_VIEW;
-    public static final String TFSAPPABOUT_VIEW = "TFSAppAbout View";
+    public static final String TFSAPPABOUT_VIEW = Messages.getString("TFSApplication.0"); //$NON-NLS-1$
     
     @Override
     public void init() {
@@ -35,8 +36,8 @@ public class TFSApplication extends MobileApplication {
     public void postInit(Scene scene) {
         Swatch.BLUE.assignTo(scene);
 
-        scene.getStylesheets().add(TFSApplication.class.getResource("style.css").toExternalForm());
-        ((Stage) scene.getWindow()).getIcons().add(new Image(TFSApplication.class.getResourceAsStream("/icon.png")));
+        scene.getStylesheets().add(TFSApplication.class.getResource("style.css").toExternalForm()); //$NON-NLS-1$
+        ((Stage) scene.getWindow()).getIcons().add(new Image(TFSApplication.class.getResourceAsStream("/icon.png"))); //$NON-NLS-1$
     }
 
     public static void main(String args[]) {

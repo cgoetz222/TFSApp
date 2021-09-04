@@ -19,6 +19,7 @@ import com.google.gson.stream.JsonReader;
 
 import edu.tfse.tfsapp.data.DataHandler;
 import edu.tfse.tfsapp.data.User;
+import edu.tfse.tfsapp.helper.Messages;
 import edu.tfse.tfsapp.helper.StringPropertyAdapter;
 import edu.tfse.tfsapp.helper.UserPropertyAdapter;
 import javafx.beans.property.StringProperty;
@@ -50,7 +51,7 @@ public class TFSAppMainPresenter {
     static {
         ROOT_DIR = Services.get(StorageService.class)
                     .flatMap(StorageService::getPrivateStorage)
-                    .orElseThrow(() -> new RuntimeException("Error retrieving private storage"));
+                    .orElseThrow(() -> new RuntimeException(Messages.getString("TFSAppMainPresenter.0"))); //$NON-NLS-1$
     }
    
     private User user;
@@ -63,7 +64,7 @@ public class TFSAppMainPresenter {
     		GsonBuilder gsonBuilder = new GsonBuilder();
     	    gsonBuilder.registerTypeAdapter(StringProperty.class, new StringPropertyAdapter());
     	    Gson gson = gsonBuilder.create();
-        	JsonReader reader = new JsonReader(new FileReader(new File(ROOT_DIR, "TFSEAPPData.json")));
+        	JsonReader reader = new JsonReader(new FileReader(new File(ROOT_DIR, "TFSEAPPData.json"))); //$NON-NLS-1$
     		
         	user = gson.fromJson(reader, new TypeToken<User>() {}.getType());
     	} catch(Exception ex) {
@@ -76,7 +77,7 @@ public class TFSAppMainPresenter {
                 appBar.setNavIcon(MaterialDesignIcon.MENU.button(e -> 
                         MobileApplication.getInstance().getDrawer().open()));
                
-                appBar.setTitleText("Theodor-Frey-Schule App");
+                appBar.setTitleText(Messages.getString("TFSAppMainPresenter.2")); //$NON-NLS-1$
                 
                 buttonSave.setGraphic(new Icon(MaterialDesignIcon.SAVE));
             }
@@ -92,7 +93,7 @@ public class TFSAppMainPresenter {
     	    GsonBuilder gsonBuilder = new GsonBuilder();
     	    gsonBuilder.registerTypeAdapter(User.class, new UserPropertyAdapter());
     	    Gson gson = gsonBuilder.create();
-    	    FileWriter writer = new FileWriter(new File(ROOT_DIR, "TFSEAPPData.json"));
+    	    FileWriter writer = new FileWriter(new File(ROOT_DIR, "TFSEAPPData.json")); //$NON-NLS-1$
     	    
         	gson.toJson(user, writer);
         	writer.flush();

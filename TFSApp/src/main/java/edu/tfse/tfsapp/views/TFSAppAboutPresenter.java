@@ -7,6 +7,7 @@ import com.gluonhq.charm.glisten.mvc.View;
 import com.gluonhq.charm.glisten.visual.MaterialDesignIcon;
 
 import edu.tfse.tfsapp.core.Version;
+import edu.tfse.tfsapp.helper.Messages;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 
@@ -27,7 +28,7 @@ public class TFSAppAboutPresenter {
                 AppBar appBar = MobileApplication.getInstance().getAppBar();
                 appBar.setNavIcon(MaterialDesignIcon.MENU.button(e -> 
                         MobileApplication.getInstance().getDrawer().open()));
-                appBar.setTitleText("Theodor-Frey-Schule App");
+                appBar.setTitleText(Messages.getString("TFSAppAboutPresenter.0")); //$NON-NLS-1$
             }
         });
     }

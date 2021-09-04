@@ -6,6 +6,8 @@ import java.io.FileWriter;
 import com.gluonhq.attach.storage.StorageService;
 import com.gluonhq.attach.util.Services;
 
+import edu.tfse.tfsapp.helper.Messages;
+
 public class DataHandler {
     // singleton instance
     private static DataHandler instance = null;
@@ -17,7 +19,7 @@ public class DataHandler {
     static {
         ROOT_DIR = Services.get(StorageService.class)
                     .flatMap(StorageService::getPrivateStorage)
-                    .orElseThrow(() -> new RuntimeException("Error retrieving private storage"));
+                    .orElseThrow(() -> new RuntimeException(Messages.getString("DataHandler.0"))); //$NON-NLS-1$
     }
     
 	/**
@@ -38,13 +40,12 @@ public class DataHandler {
 	 */
 	public void initFromJSON() {
 		if(instance != null) {
-			jsonFile = new File(ROOT_DIR, "TFSEAPPData.json"); //"TFSEAPPData.json");
+			jsonFile = new File(ROOT_DIR, "TFSEAPPData.json"); //"TFSEAPPData.json"); //$NON-NLS-1$
 			
 			try {
 	            if (!jsonFile.exists()) {
 	                try (FileWriter writer = new FileWriter(jsonFile)) {
-	                    //writer.write("{\"name\":\"Duke\",\"subscribed\":true}");
-	                    writer.write("{\"name\":\"Test\",\"age\":\"22\",\"height\":\"182\",\"weight\":\"75\"}");
+	                    writer.write("{\"name\":\"Name\",\"age\":\"100\",\"height\":\"180\",\"weight\":\"75\"}"); //$NON-NLS-1$
 	                    writer.flush();
 	                    writer.close();
 	                }
