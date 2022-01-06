@@ -21,12 +21,44 @@
 	-fx-padding: 5;
 }
 
+.normalTextSmall {
+	-fx-text-fill: #ffffff;
+	-fx-padding: 5;
+	-fx-font-size: 10px;
+}
+
 .normalInputText {
 	-fx-background-color: #2c3338;
 	-fx-text-fill: #ffffff;
 	-fx-padding: 5;
 }
 
+.normalWeight {
+	-fx-background-color: #09AF00;
+	-fx-text-fill: #ffffff;
+	-fx-padding: 5;
+}
+
+.highWeight {
+	-fx-background-color: #b00020;
+	-fx-text-fill: #ffffff;
+	-fx-padding: 5;
+}
+
+.lowWeight {
+	-fx-background-color: #0336FF;
+	-fx-text-fill: #ffffff;
+	-fx-padding: 5;
+}
+
 .button {
 	-fx-background-color: #fe6c61;
+}
+
+.circleSelected {
+	-fx-fill: #fe6c61;
+}
+
+.circleUnselected {
+	-fx-fill: #ffffff;
 }

@@ -8,7 +8,7 @@
 
 <View fx:id="tfsappabout" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="350.0" stylesheets="@tfsappabout.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.tfse.tfsapp.views.TFSAppAboutPresenter">
    <center>
-      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="350.0" BorderPane.alignment="CENTER">
+      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="350.0" stylesheets="@tfsappabout.css" BorderPane.alignment="CENTER">
          <children>
             <CardPane prefWidth="350.0" VBox.vgrow="ALWAYS">
                <VBox prefWidth="350.0" stylesheets="@tfsappabout.css">
@@ -30,6 +30,13 @@
                      <Label prefWidth="350.0" styleClass="normalText" text="%about.thanks" wrapText="true" />
                      <Label styleClass="normalText" text="%about.google_gson" wrapText="true" />
                      <Label prefWidth="350.0" styleClass="normalText" text="%about.gluon" wrapText="true" />
+                  </children>
+               </VBox>
+               <VBox prefWidth="350.0">
+                  <children>
+                     <Label styleClass="headerText" text="%about.pic.sources" />
+                     <Label prefWidth="350.0" styleClass="normalText" text="%about.pic.intro" />
+                     <Label prefWidth="350.0" styleClass="normalText" text="%screening.heartrate.pic" />
                   </children>
                </VBox>
                <VBox prefWidth="350.0">

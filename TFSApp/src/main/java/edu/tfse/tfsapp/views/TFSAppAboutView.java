@@ -12,10 +12,10 @@ public class TFSAppAboutView {
     
     public View getView() {
         try {       	
-            View view = FXMLLoader.load(TFSAppAboutView.class.getResource("tfsappabout.fxml"), Localaziation.getBundle(this)); //$NON-NLS-1$
+            View view = FXMLLoader.load(TFSAppAboutView.class.getResource("tfsappabout.fxml"), Localiziation.getBundle(this)); //$NON-NLS-1$
             return view;
         } catch (IOException e) {
-            System.out.println(Messages.getString("TFSAppAboutView.1") + e); //$NON-NLS-1$
+            System.out.println(Messages.getString("TFSAppAboutView.error.readFXML") + e); //$NON-NLS-1$
             return new View();
         }
     }

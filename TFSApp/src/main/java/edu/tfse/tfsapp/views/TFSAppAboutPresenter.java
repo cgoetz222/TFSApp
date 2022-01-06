@@ -28,7 +28,7 @@ public class TFSAppAboutPresenter {
                 AppBar appBar = MobileApplication.getInstance().getAppBar();
                 appBar.setNavIcon(MaterialDesignIcon.MENU.button(e -> 
                         MobileApplication.getInstance().getDrawer().open()));
-                appBar.setTitleText(Messages.getString("TFSAppAboutPresenter.0")); //$NON-NLS-1$
+                appBar.setTitleText(Messages.getString("TFSAppAboutPresenter.appbar")); //$NON-NLS-1$
             }
         });
     }

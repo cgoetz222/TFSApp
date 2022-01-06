@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.gluonhq.charm.glisten.control.CardPane?>
+<?import com.gluonhq.charm.glisten.mvc.View?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+
+<View fx:id="tfsappsettings" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="350.0" stylesheets="@tfsappsettings.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.tfse.tfsapp.views.TFSAppSettingsPresenter">
+   <center>
+      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="350.0" BorderPane.alignment="CENTER">
+         <children>
+            <CardPane prefWidth="350.0" VBox.vgrow="ALWAYS">
+               <VBox prefWidth="350.0">
+                  <children>
+                     <Label styleClass="headerText" text="%settings.logging" />
+                     <HBox alignment="CENTER_LEFT" prefHeight="35.0" prefWidth="334.0">
+                        <children>
+                           <Label prefWidth="250.0" styleClass="normalText" text="%settings.enableLogging" />
+                           <Region prefHeight="200.0" prefWidth="200.0" />
+                           <Pane fx:id="paneToggleSwitchLogging" prefHeight="200.0" prefWidth="200.0">
+                              <HBox.margin>
+                                 <Insets right="20.0" />
+                              </HBox.margin>
+                           </Pane>
+                        </children>
+                     </HBox>
+                  </children>
+               </VBox>
+            </CardPane>
+         </children>
+      </VBox>
+   </center>
+   <top>
+      <CardPane prefHeight="69.0" prefWidth="350.0" style="-fx-allign: center;" BorderPane.alignment="CENTER">
+          <Label style="-fx-font-size: 15;" styleClass="headerText" text="%settings.header" />
+      </CardPane>
+   </top>
+</View>

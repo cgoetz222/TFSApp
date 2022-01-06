@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.gluonhq.charm.glisten.control.CardPane?>
+<?import com.gluonhq.charm.glisten.mvc.View?>
+<?import edu.zgb.ui.fx.util.IntegerTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<View fx:id="viewScreening" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="350.0" stylesheets="@tfsappmain.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.tfse.tfsapp.views.TFSAppScreeningPresenter">
+   <center>
+      <VBox fx:id="vboxMiddle" alignment="CENTER" onSwipeLeft="#onSwipeLeft" onSwipeRight="#onSwipeRight" prefHeight="200.0" prefWidth="100.0" spacing="15.0" BorderPane.alignment="CENTER">
+         <children>
+            <CardPane fx:id="cardPaneScreening" VBox.vgrow="ALWAYS">
+               <VBox fx:id="vboxScreeningData3" minHeight="-Infinity" prefHeight="250.0" prefWidth="100.0">
+                  <padding>
+                     <Insets right="5.0" />
+                  </padding>
+                  <children>
+                     <Label styleClass="headerText" text="%screening.bellyMusclesHeader" />
+                     <Label maxWidth="330.0" minHeight="-Infinity" styleClass="normalTextSmall" text="%screening.bellyMusclesHowto" wrapText="true" />
+                     <GridPane>
+                        <columnConstraints>
+                           <ColumnConstraints hgrow="SOMETIMES" maxWidth="240.0" minWidth="10.0" prefWidth="35.0" />
+                           <ColumnConstraints hgrow="SOMETIMES" maxWidth="290.0" minWidth="10.0" prefWidth="145.0" />
+                           <ColumnConstraints hgrow="SOMETIMES" maxWidth="290.0" minWidth="10.0" prefWidth="36.0" />
+                           <ColumnConstraints hgrow="SOMETIMES" maxWidth="290.0" minWidth="10.0" prefWidth="145.0" />
+                        </columnConstraints>
+                        <rowConstraints>
+                           <RowConstraints minHeight="10.0" prefHeight="36.0" valignment="CENTER" vgrow="SOMETIMES" />
+                           <RowConstraints minHeight="30.0" prefHeight="36.0" valignment="CENTER" vgrow="SOMETIMES" />
+                           <RowConstraints minHeight="36.0" prefHeight="36.0" valignment="CENTER" vgrow="SOMETIMES" />
+                           <RowConstraints minHeight="30.0" prefHeight="36.0" valignment="CENTER" vgrow="SOMETIMES" />
+                           <RowConstraints minHeight="10.0" valignment="CENTER" vgrow="SOMETIMES" />
+                           <RowConstraints />
+                        </rowConstraints>
+                        <children>
+                           <RadioButton fx:id="rbBellyMen1" mnemonicParsing="false" GridPane.rowIndex="1">
+                              <toggleGroup>
+                                 <ToggleGroup fx:id="toggleGroupBelly" />
+                              </toggleGroup>
+                           </RadioButton>
+                           <RadioButton fx:id="rbBellyMen2" mnemonicParsing="false" toggleGroup="$toggleGroupBelly" GridPane.rowIndex="2" />
+                           <RadioButton fx:id="rbBellyMen3" mnemonicParsing="false" toggleGroup="$toggleGroupBelly" GridPane.rowIndex="3" />
+                           <Label styleClass="headerText" text="%screening.bellyMusclesMen" GridPane.columnSpan="2" GridPane.halignment="CENTER" />
+                           <Label styleClass="headerText" text="%screening.bellyMusclesWomen" GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.halignment="CENTER" />
+                           <RadioButton fx:id="rbBellyWomen1" mnemonicParsing="false" toggleGroup="$toggleGroupBelly" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                           <RadioButton fx:id="rbBellyWomen2" mnemonicParsing="false" toggleGroup="$toggleGroupBelly" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                           <RadioButton fx:id="rbBellyWomen3" mnemonicParsing="false" toggleGroup="$toggleGroupBelly" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                           <Label styleClass="normalTextSmall" text="%screening.bellyMusclesMen1" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                           <Label styleClass="normalTextSmall" text="%screening.bellyMusclesMen2" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                           <Label styleClass="normalTextSmall" text="%screening.bellyMusclesMen3" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                           <Label styleClass="normalTextSmall" text="%screening.bellyMusclesWomen1" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                           <Label styleClass="normalTextSmall" text="%screening.bellyMusclesWomen2" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                           <Label styleClass="normalTextSmall" text="%screening.bellyMusclesWomen3" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+                        </children>
+                     </GridPane>
+                  </children>
+               </VBox>
+               <VBox fx:id="vboxScreeningData1" prefHeight="150.0" prefWidth="100.0">
+                  <children>
+                      <Label styleClass="headerText" text="%screening.heartrate" />
+                     <GridPane>
+                       <columnConstraints>
+                         <ColumnConstraints hgrow="SOMETIMES" maxWidth="240.0" minWidth="10.0" prefWidth="200.0" />
+                         <ColumnConstraints hgrow="SOMETIMES" maxWidth="250.0" minWidth="10.0" prefWidth="100.0" />
+                       </columnConstraints>
+                       <rowConstraints>
+                           <RowConstraints minHeight="10.0" prefHeight="38.0" valignment="CENTER" vgrow="SOMETIMES" />
+                           <RowConstraints minHeight="10.0" prefHeight="38.0" valignment="CENTER" vgrow="SOMETIMES" />
+                           <RowConstraints />
+                       </rowConstraints>
+                        <children>
+                           <Label styleClass="normalText" text="%screening.maximumHeartRate" GridPane.rowIndex="1" />
+                           <Label styleClass="normalText" text="%screening.restingHeartRate" />
+                           <TextField editable="false" styleClass="normalText" />
+                           <IntegerTextField fx:id="itfNormalHeartRate" maxWidth="100.0" prefHeight="36.0" prefWidth="80.0" styleClass="normalInputText" GridPane.columnIndex="1" />
+                           <IntegerTextField fx:id="itfMaxHeartRate" maxWidth="100.0" prefHeight="36.0" prefWidth="80.0" styleClass="normalInputText" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        </children>
+                     </GridPane>
+                  </children>
+                  <padding>
+                     <Insets right="5.0" />
+                  </padding>
+               </VBox>
+               <VBox fx:id="vboxScreeningData2" prefHeight="220.0" prefWidth="100.0">
+                  <children>
+                      <Label styleClass="headerText" text="%screening.back" />
+                     <GridPane>
+                       <columnConstraints>
+                         <ColumnConstraints hgrow="SOMETIMES" maxWidth="240.0" minWidth="10.0" prefWidth="35.0" />
+                         <ColumnConstraints hgrow="SOMETIMES" maxWidth="290.0" minWidth="10.0" prefWidth="290.0" />
+                       </columnConstraints>
+                       <rowConstraints>
+                           <RowConstraints minHeight="10.0" prefHeight="36.0" valignment="CENTER" vgrow="SOMETIMES" />
+                           <RowConstraints minHeight="10.0" prefHeight="36.0" valignment="CENTER" vgrow="SOMETIMES" />
+                           <RowConstraints minHeight="10.0" prefHeight="36.0" valignment="CENTER" vgrow="SOMETIMES" />
+                           <RowConstraints minHeight="10.0" prefHeight="36.0" valignment="CENTER" vgrow="SOMETIMES" />
+                           <RowConstraints minHeight="10.0" prefHeight="36.0" valignment="CENTER" vgrow="SOMETIMES" />
+                           <RowConstraints minHeight="10.0" valignment="CENTER" vgrow="SOMETIMES" />
+                           <RowConstraints />
+                       </rowConstraints>
+                        <children>
+                           <Label fx:id="labelStepA" maxWidth="280.0" minHeight="-Infinity" styleClass="normalText" text="%screening.stepA" wrapText="true" GridPane.columnIndex="1">
+                              <font>
+                                 <Font size="10.0" />
+                              </font></Label>
+                           <Label maxWidth="280.0" minHeight="-Infinity" styleClass="normalText" text="%screening.stepB" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                              <font>
+                                 <Font size="10.0" />
+                              </font></Label>
+                           <RadioButton fx:id="rbMobilityBack1" mnemonicParsing="false">
+                              <toggleGroup>
+                                 <ToggleGroup fx:id="toggleGroupBack" />
+                              </toggleGroup>
+                           </RadioButton>
+                           <RadioButton fx:id="rbMobilityBack2" mnemonicParsing="false" toggleGroup="$toggleGroupBack" GridPane.rowIndex="1" />
+                           <RadioButton fx:id="rbMobilityBack3" mnemonicParsing="false" toggleGroup="$toggleGroupBack" GridPane.rowIndex="2" />
+                           <RadioButton fx:id="rbMobilityBack4" mnemonicParsing="false" toggleGroup="$toggleGroupBack" GridPane.rowIndex="3" />
+                           <Label maxWidth="280.0" minHeight="-Infinity" styleClass="normalText" text="%screening.stepC" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                              <font>
+                                 <Font size="10.0" />
+                              </font></Label>
+                           <RadioButton fx:id="rbMobilityBack5" mnemonicParsing="false" toggleGroup="$toggleGroupBack" GridPane.rowIndex="4" />
+                           <Label maxWidth="280.0" minHeight="-Infinity" styleClass="normalText" text="%screening.stepD" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                              <font>
+                                 <Font size="10.0" />
+                              </font></Label>
+                           <Label maxWidth="280.0" minHeight="-Infinity" styleClass="normalText" text="%screening.stepE" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                              <font>
+                                 <Font size="10.0" />
+                              </font></Label>
+                        </children>
+                     </GridPane>
+                  </children>
+                  <padding>
+                     <Insets right="5.0" />
+                  </padding>
+               </VBox>
+               <VBox fx:id="vboxScreeningProgress" alignment="CENTER" prefHeight="50.0" prefWidth="350.0">
+                  <children>
+                     <HBox fx:id="hboxScreeningProgess" alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="5.0" />
+                  </children>
+              </VBox>
+               <VBox fx:id="vboxScreeningIcon1" alignment="CENTER" prefHeight="210.0" prefWidth="350.0">
+                  <children>
+                     <ImageView fitHeight="200.0" fitWidth="300.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                           <Image url="@../../../../pictures/heartrate300x200alpha.png" />
+                        </image>
+                     </ImageView>
+                  </children>
+               </VBox>
+               <VBox fx:id="vboxScreeningIcon2" alignment="CENTER" prefHeight="210.0" prefWidth="350.0">
+                  <children>
+                     <ImageView fitHeight="200.0" fitWidth="300.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                           <Image url="@../../../../pictures/schultern-lockern-267x200.jpg" />
+                        </image>
+                     </ImageView>
+                  </children>
+               </VBox>       
+               <VBox fx:id="vboxScreeningIcon3" alignment="CENTER" prefHeight="210.0" prefWidth="350.0">
+                  <children>
+                     <ImageView fitHeight="200.0" fitWidth="300.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                           <Image url="@../../../../pictures/bauchmuskeln-356x200.jpg" />
+                        </image>
+                     </ImageView>
+                  </children>
+               </VBox>       
+            </CardPane>
+         </children>
+      </VBox>
+   </center>
+   <top>
+      <CardPane prefHeight="69.0" prefWidth="350.0" style="-fx-allign: center;" BorderPane.alignment="CENTER">
+          <Label style="-fx-font-size: 15;" styleClass="headerText" text="%screening.header" />
+      </CardPane>
+   </top>
+</View>

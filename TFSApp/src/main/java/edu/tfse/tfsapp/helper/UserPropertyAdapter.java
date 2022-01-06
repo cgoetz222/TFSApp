@@ -27,6 +27,7 @@ public class UserPropertyAdapter implements JsonSerializer<User>, JsonDeserializ
 		  JsonObject result = new JsonObject();
 		  
 		  result.add("name", new JsonPrimitive(user.getName().get()));
+		  result.add("sex", new JsonPrimitive(user.getSex().get()));
 		  result.add("age", new JsonPrimitive(user.getAge().get()));
 		  result.add("height", new JsonPrimitive(user.getHeight().get()));
 		  result.add("weight", new JsonPrimitive(user.getWeight().get()));
