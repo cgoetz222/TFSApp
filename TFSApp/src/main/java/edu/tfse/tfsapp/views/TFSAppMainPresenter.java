@@ -22,14 +22,12 @@ import edu.zgb.ui.fx.util.DoubleTextField;
 import edu.zgb.ui.fx.util.IntegerTextField;
 import javafx.fxml.FXML;
 import javafx.scene.control.ComboBox;
+import javafx.scene.control.DatePicker;
 import javafx.scene.control.Label;
 
 public class TFSAppMainPresenter {
     @FXML
     private View tfsappmain;
-
-    @FXML
-    private Label label;
     
     @FXML 
     private TextField textFieldName;
@@ -50,6 +48,8 @@ public class TFSAppMainPresenter {
     @FXML
     private ComboBox<String> comboBoxSex;
     
+    @FXML
+    DatePicker datePicker;
    
     public static final File ROOT_DIR; 
     
@@ -129,6 +129,12 @@ public class TFSAppMainPresenter {
     	user.setWeight(weight);
     	updateUser();
     }
+    
+    @FXML
+    void onBirthdateSelected() {
+    	user.setBirthdate(datePicker.getValue());
+    	storeUserData();
+    }
 
     private void initDataBinding() {
        	textFieldName.textProperty().bindBidirectional(user.getName());
@@ -149,6 +155,8 @@ public class TFSAppMainPresenter {
        	labelWeightClassification.textProperty().bind(user.getWeightClassification());       
        	
        	setBMIClassification();
+       	
+       	datePicker.setValue(user.getBirthdateAsDate());
     }
     
     private void updateUser() {

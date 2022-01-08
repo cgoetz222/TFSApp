@@ -128,7 +128,7 @@ public class FileInputOutputHandler {
 	            if (!jsonFile.exists()) {
 	            	// create file if it doesn't exist
 	                try (FileWriter writer = new FileWriter(jsonFile)) {
-	                    writer.write("{\"name\":\"Name\",\"sex\":\"m\",\"age\":\"100\",\"height\":\"180\",\"weight\":\"75\"}"); //$NON-NLS-1$
+	                    writer.write("{\"name\":\"Name\",\"sex\":\"m\",\"birthdate\":\"01.01.2000\",\"height\":\"180\",\"weight\":\"75\"}"); //$NON-NLS-1$
 	                    writer.flush();
 	                    writer.close();
 	                }
