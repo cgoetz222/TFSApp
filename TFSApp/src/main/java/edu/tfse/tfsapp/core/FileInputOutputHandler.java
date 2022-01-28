@@ -68,14 +68,13 @@ public class FileInputOutputHandler {
 	                    writer.flush();
 	                    writer.close();
 	                }
-	            } else {
-	        		GsonBuilder gsonBuilder = new GsonBuilder();
-	        	    gsonBuilder.registerTypeAdapter(StringProperty.class, new StringPropertyAdapter());
-	        	    Gson gson = gsonBuilder.create();
-	            	JsonReader reader = new JsonReader(new FileReader(new File(ROOT_DIR, SCREENING_FILE))); 
-	        		
-	            	return gson.fromJson(reader, new TypeToken<Screening>() {}.getType());
 	            }
+        		GsonBuilder gsonBuilder = new GsonBuilder();
+        	    gsonBuilder.registerTypeAdapter(StringProperty.class, new StringPropertyAdapter());
+        	    Gson gson = gsonBuilder.create();
+            	JsonReader reader = new JsonReader(new FileReader(new File(ROOT_DIR, SCREENING_FILE))); 
+        		
+            	return gson.fromJson(reader, new TypeToken<Screening>() {}.getType());	            
 			} catch(Exception ex) {
 				ex.printStackTrace();
 			}
@@ -132,15 +131,14 @@ public class FileInputOutputHandler {
 	                    writer.flush();
 	                    writer.close();
 	                }
-	            } else {
-	        		GsonBuilder gsonBuilder = new GsonBuilder();
-	        	    gsonBuilder.registerTypeAdapter(StringProperty.class, new StringPropertyAdapter());
-	        	    Gson gson = gsonBuilder.create();
-	            	JsonReader reader = new JsonReader(new FileReader(new File(ROOT_DIR, USERDATA_FILE)));
-	        		
-	            	// init user from JSON file
-	            	return gson.fromJson(reader, new TypeToken<User>() {}.getType());
-	            }
+	            } 
+        		GsonBuilder gsonBuilder = new GsonBuilder();
+        	    gsonBuilder.registerTypeAdapter(StringProperty.class, new StringPropertyAdapter());
+        	    Gson gson = gsonBuilder.create();
+            	JsonReader reader = new JsonReader(new FileReader(new File(ROOT_DIR, USERDATA_FILE)));
+        		
+            	// init user from JSON file
+            	return gson.fromJson(reader, new TypeToken<User>() {}.getType());
 			} catch(Exception ex) {
 				ex.printStackTrace();
 			}

@@ -133,7 +133,7 @@ public class TFSAppMainPresenter {
     @FXML
     void onBirthdateSelected() {
     	user.setBirthdate(datePicker.getValue());
-    	storeUserData();
+    	updateUser();
     }
 
     private void initDataBinding() {
